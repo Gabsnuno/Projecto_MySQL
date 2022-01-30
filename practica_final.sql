@@ -98,3 +98,4 @@ INSERT INTO Categorias
 VALUES (default,"Categoria Acido 8");
 
 SELECT * FROM Categorias;
+
