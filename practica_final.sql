@@ -68,34 +68,34 @@ SELECT * FROM Notas;
 
 /*tabla_categorias*/
 INSERT INTO Categorias 
-VALUES (default,"Categoria Desayuno 1");
+VALUES (default,"Categoria alimentos 1");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Alumerzo 5");
+VALUES (default,"Categoria alimentos 2");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Comida 7");
+VALUES (default,"Categoria alimentos 3");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Postre 10");
+VALUES (default,"Categoria alimentos 4");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Botana 2");
+VALUES (default,"Categoria alimentos 5");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Cena 6");
+VALUES (default,"Categoria alimentos 6");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Colacion 3");
+VALUES (default,"Categoria alimentos 7");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Dulce 9");
+VALUES (default,"Categoria alimentos 8");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Salado 4");
+VALUES (default,"Categoria alimentos 9");
 
 INSERT INTO Categorias 
-VALUES (default,"Categoria Acido 8");
+VALUES (default,"Categoria alimentos 10");
 
 SELECT * FROM Categorias;
 
