@@ -1,0 +1,131 @@
+CREATE TABLE `Categorias` (
+  `categoria_id` INT AUTO_INCREMENT NOT NULL,
+  `descripcion` TINYTEXT NOT NULL,
+  PRIMARY KEY (`categoria_id`)
+);
+
+CREATE TABLE `Usuarios` (
+  `usuario_id` INT AUTO_INCREMENT NOT NULL ,
+  `nombre` VARCHAR(50) NOT NULL,
+  `e_mail` VARCHAR(50) UNIQUE,
+  PRIMARY KEY (`usuario_id`)
+);
+
+CREATE TABLE `Categorias_Notas` (
+  `notas_categorias_id` INT AUTO_INCREMENT NOT NULL ,
+  `categoria_id` INT  NOT NULL ,
+  `notas_id` INT  NOT NULL,
+  PRIMARY KEY (`notas_categorias_id`)
+);
+
+CREATE TABLE `Notas` (
+  `notas_id` INT AUTO_INCREMENT NOT NULL,
+  `titulo` VARCHAR(50) NOT NULL,
+  `usuario_id` INT  NOT NULL ,
+  `fecha_creacion` DATE NOT NULL,
+  `fecha_modificacion` DATE  NULL,
+  `descripcion` TINYTEXT NOT NULL,
+  `permanente` TINYINT ,
+  PRIMARY KEY (`notas_id`),
+  FOREIGN KEY (`usuario_id`) REFERENCES `Usuarios`(`usuario_id`)
+  
+  ## Valores de prueba con inserts
+  INSERT INTO Usuarios 
+VALUES (default, "Rue", "Rue@Bennett");
+
+INSERT INTO Usuarios 
+VALUES (default, "Jules", "Jules@Vaughn");
+
+INSERT INTO Usuarios 
+VALUES (default, "Nate", "Nate@Jacobs");
+
+INSERT INTO Usuarios 
+VALUES (default, "Cassie", "Cassie@Howard");
+
+INSERT INTO Usuarios 
+VALUES (default, "Gia", "Gia@Bennett");
+
+INSERT INTO Usuarios 
+VALUES (default, "Maddy", "Maddy@Perez");
+
+INSERT INTO Usuarios 
+VALUES (default, "Lexi", "Lexi@Howard");
+
+INSERT INTO Usuarios 
+VALUES (default, "Kat", "Kat@Hernandez");
+
+INSERT INTO Usuarios 
+VALUES (default, "Nicole", "Nicole@Haught");
+
+INSERT INTO Usuarios 
+VALUES (default, "Waverly", "Waverly@Earp");
+
+SELECT *
+FROM Usuarios;
+
+/*tabla_notas*/
+INSERT INTO Notas 
+VALUES (default, "Primera_nota", "2022/01/29","2022/01/30", "Desayuno",1);
+
+INSERT INTO Notas 
+VALUES (default, "Seguda_nota", "2022/01/29","2022/01/30", "Almuerzo",5);
+
+INSERT INTO Notas 
+VALUES (default, "Tercera_nota", "2022/01/29","2022/01/30", "Comida",7);
+
+INSERT INTO Notas 
+VALUES (default, "Cuarta_nota", "2022/01/29","2022/01/30", "Postre",10);
+
+INSERT INTO Notas 
+VALUES (default, "Quinta_nota", "2022/01/29","2022/01/30", "Botana",2);
+
+INSERT INTO Notas 
+VALUES (default, "Sexta_nota", "2022/01/29","2022/01/30", "Cena",6);
+
+INSERT INTO Notas 
+VALUES (default, "Septima_nota", "2022/01/29","2022/01/30", "Colacion",3);
+
+INSERT INTO Notas 
+VALUES (default, "Octava_nota", "2022/01/29","2022/01/30", "Dulce",9);
+
+INSERT INTO Notas 
+VALUES (default, "Novena_nota", "2022/01/29","2022/01/30", "Salado",4);
+
+INSERT INTO Notas 
+VALUES (default, "Decima_nota", "2022/01/29","2022/01/30", "Acido",8);
+
+SELECT * FROM Notas;
+
+/*tabla_categorias*/
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 1");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 2");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 3");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 4");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 5");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 6");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 7");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 8");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 9");
+
+INSERT INTO Categorias 
+VALUES (default,"Categoria alimentos 10");
+
+SELECT * FROM Categorias;
+);
